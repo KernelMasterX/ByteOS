@@ -17,7 +17,13 @@ byteOS
 ​qemu-system-i386
 ​Building and Running
 # Compile the project
-nasm -f bin boot.asm -o boot.bin && clang --target=i386-pc-none-elf -m32 -ffreestanding -fno-pie -nostdlib -fno-stack-protector -mno-sse -mno-sse2 -mno-mmx -O0 -c kernel.c -o kernel.o && ld.lld -m elf_i386 -T linker.ld -o kernel.elf kernel.o && objcopy -O binary kernel.elf kernel.bin && cat boot.bin kernel.bin > os.img && truncate -s 2M os.img && ls -lh os.img
+
+Install essential build tools: apt install build-essential -y or pkg install build-essential
+
+Clone the repo: git clone https://github.com/KernelMasterX/ByteOS.git
+Go in the directory: cd byteos
+
+Compile: type make
 
 🤝 Contributing
 ​Contributions are welcome. Feel free to open an Issue or submit a Pull Request
