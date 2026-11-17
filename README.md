@@ -21,6 +21,7 @@ byteOS
 Install essential build tools: apt install build-essential -y or pkg install build-essential
 
 Clone the repo: git clone https://github.com/KernelMasterX/ByteOS.git
+
 Go in the directory: cd byteos
 
 Compile: type make
